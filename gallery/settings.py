@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '!ls&hwevb%+bg98nhvrhls@*4q^ui#c!oo3gzip3)&xch4k3+3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'gallery',
         'USER': 'moringa',
         'PASSWORD': 'Sonray20202'
-        'HOST': config('localhost'),
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
