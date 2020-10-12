@@ -79,17 +79,17 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
-        'USER': 'moringa',
-        'PASSWORD': 'Sonray20202',
-        'HOST': 'localhost',
-        'PORT': '',
+if config('MODE')=="dev":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'gallery',
+            'USER': 'moringa',
+            'PASSWORD': 'Sonray20202',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
     }
-}
 # production
 else:
    DATABASES = {
